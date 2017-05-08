@@ -1,0 +1,18 @@
+Installacja na sererze.
+
+
+Budoawnie za pomoca maven w wersji: 2.2.1
+Java 1.6
+
+Deployowanie na serwer (jboss wersji 6):
+1. Zbudować mavenem komendą
+	mvn clean install
+2. Przerzucić zbudowanego war'a na
+	<JBoss_Home>/server/<instance-name>/deploy/
+3. Odpalić serwer 
+4. Testy np:
+	http://localhost:8080/javaee-scheduler-1.0-SNAPSHOT/rest?val=100&codeIn=PLN&codeOut=ISK
+	Waluta wejściowa PLN
+	Kwota = 100
+	Waluta wyjściowa=ISK
+	da wynik 2761.5918
